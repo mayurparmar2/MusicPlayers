@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar_main" />
+<!--        <com.google.android.material.appbar.AppBarLayout-->
+<!--            android:id="@+id/AppBarLayout"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:theme="@style/Widget.Design.AppBarLayout"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent">-->
+
+<!--            <androidx.appcompat.widget.Toolbar-->
+<!--                android:id="@+id/toolbar"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="?attr/actionBarSize"-->
+<!--                app:popupTheme="@style/Widget.Design.AppBarLayout" />-->
+<!--        </com.google.android.material.appbar.AppBarLayout>-->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:padding="20dp">
+
+            <FrameLayout
+                android:id="@+id/nowFrameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toTopOf="@+id/btnFavrite"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginBottom="20dp"
+                />
+<!--            <androidx.viewpager.widget.ViewPager-->
+<!--                android:layout_width="250dp"-->
+<!--                android:layout_height="250dp"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                />-->
+            <ImageView
+                android:id="@+id/PalayImageId"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/ic__music_24"
+                android:scaleType="fitCenter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+            <ImageView
+                android:id="@+id/gradiant"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/greadiant"
+                android:scaleType="fitCenter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/txtSongName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:text="txtLayrics............."
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textSize="30sp"
+                android:maxLines="1"
+                android:autoSizeTextType="uniform"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/PalayImageId" />
+
+            <TextView
+                android:id="@+id/txtArtist"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:textAlignment="center"
+                android:text="txtArtist............."
+                android:maxLines="1"
+                android:autoSizeTextType="uniform"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtSongName" />
+
+            <ImageButton
+                android:id="@+id/btnNowPlayList"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="fitCenter"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_queue_music_24"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/btnFavrite"
+
+                />
+
+            <ImageButton
+                android:id="@+id/btnFavrite"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="fitCenter"
+                android:layout_marginTop="20dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_full_favorite_24"
+                app:layout_constraintEnd_toStartOf="@+id/btnAddTo"
+                app:layout_constraintStart_toEndOf="@+id/btnNowPlayList"
+                app:layout_constraintTop_toBottomOf="@+id/txtArtist" />
+
+            <ImageButton
+                android:id="@+id/btnAddTo"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_add_24"
+                android:background="@android:color/transparent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/btnFavrite" />
+            <SeekBar
+                android:id="@+id/palyerSeekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnFavrite"
+                app:layout_constraintBottom_toTopOf="@+id/btnplay"
+                />
+
+            <TextView
+                android:id="@+id/txtStarDuration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00"
+                android:layout_margin="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/palyerSeekBar" />
+
+            <TextView
+                android:id="@+id/txtEndDuration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00"
+                android:layout_margin="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/palyerSeekBar" />
+
+
+            <ImageButton
+                android:id="@+id/btnShuffle"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_shuffle_24"
+                android:background="@android:color/transparent"
+                app:layout_constraintEnd_toStartOf="@+id/btnPrevious"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/btnPrevious" />
+
+            <ImageButton
+                android:id="@+id/btnPrevious"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_previous_24"
+                android:background="@android:color/transparent"
+                app:layout_constraintEnd_toStartOf="@+id/btnplay"
+                app:layout_constraintStart_toEndOf="@+id/btnShuffle"
+                app:layout_constraintTop_toTopOf="@+id/btnplay"
+                />
+
+            <ImageButton
+                android:id="@+id/btnplay"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="30dp"
+                android:scaleType="fitCenter"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_play_arrow_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btnNext"
+                app:layout_constraintStart_toEndOf="@+id/btnPrevious"
+                app:layout_constraintTop_toBottomOf="@+id/palyerSeekBar" />
+
+            <ImageButton
+                android:id="@+id/btnNext"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_skip_next_24"
+                android:background="@android:color/transparent"
+                app:layout_constraintStart_toEndOf="@+id/btnplay"
+                app:layout_constraintTop_toTopOf="@+id/btnplay"
+                app:layout_constraintEnd_toStartOf="@+id/btnRipeater"
+                />
+
+            <ImageButton
+                android:id="@+id/btnRipeater"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_repeat"
+                android:background="@android:color/transparent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btnNext"
+                app:layout_constraintTop_toTopOf="@+id/btnplay"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</layout>

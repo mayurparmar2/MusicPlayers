@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/AppBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#152163">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:src="@drawable/ic_music_"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/shape_search"
+                    android:hint="Search"
+                    android:paddingStart="20dp"
+                    android:textAlignment="textStart"
+                    android:textColorHint="@color/White"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/imageView4"
+                    app:layout_constraintStart_toEndOf="@+id/imageView2"
+                    app:layout_constraintTop_toTopOf="parent"
+
+                    />
+                <ImageButton
+                    android:id="@+id/imageView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:background="#152163"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_baseline_doorbell_24"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+        <!--            app:popupTheme="@style/AppTheme.PopupOverlay"-->
+        <!--            app:theme="@style/ToolbarTheme"-->
+        <!--            />-->
+
+        <!--        <View-->
+        <!--            android:id="@+id/anchor_dropdown"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="0dp" />-->
+        <!--            <com.google.android.material.appbar.MaterialToolbar-->
+        <!--                android:id="@+id/toolbar"-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="?attr/actionBarSize"-->
+        <!--                app:popupTheme="@style/Widget.Design.AppBarLayout"-->
+        <!--                app:title="Music"-->
+        <!--                app:navigationIcon="@drawable/ic__music_24"-->
+        <!--                style="@style/Widget.MaterialComponents.Toolbar.Primary"-->
+        <!--                >-->
+
+        <!--            </com.google.android.material.appbar.MaterialToolbar>-->
+    </com.google.android.material.appbar.AppBarLayout>
+    <!--    <RelativeLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_margin="8dp"-->
+    <!--        android:orientation="horizontal">-->
+
+    <!--        <RelativeLayout-->
+    <!--            android:layout_marginStart="18dp"-->
+    <!--            android:id="@+id/imgProfile"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content">-->
+
+    <!--            <ImageView-->
+    <!--                android:layout_width="50dp"-->
+    <!--                android:layout_height="50dp"-->
+    <!--                android:layout_centerVertical="true"-->
+    <!--                android:src="@drawable/ic_headphone" />-->
+
+    <!--        </RelativeLayout>-->
+
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_below="@+id/imgProfile"-->
+    <!--            android:layout_marginTop="15dp"-->
+    <!--            android:orientation="vertical">-->
+
+    <!--&lt;!&ndash;            <TextView&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:layout_width="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:layout_marginStart="1dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:text="Hello, Azhar!"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:textColor="@android:color/black"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:textSize="16sp" />&ndash;&gt;-->
+    <!--            <TextView-->
+    <!--                android:id="@+id/toolBaraTitile"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginTop="10dp"-->
+    <!--                android:text="Music Playlist"-->
+    <!--                android:textColor="@android:color/black"-->
+    <!--                android:textSize="24sp"-->
+    <!--                android:textStyle="bold" />-->
+
+    <!--        </LinearLayout>-->
+
+    <!--    </RelativeLayout>-->
+
+</FrameLayout>

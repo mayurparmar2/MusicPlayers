@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar_main" />
+<!--        <com.google.android.material.appbar.AppBarLayout-->
+<!--            android:id="@+id/AppBarLayout"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:theme="@style/Widget.Design.BottomNavigationView"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent">-->
+<!--            <androidx.appcompat.widget.Toolbar-->
+<!--                android:id="@+id/toolbar"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="?attr/actionBarSize"-->
+<!--                android:background="?attr/colorPrimary"-->
+<!--                app:collapseIcon="@drawable/ic_baseline_search_24"-->
+<!--                app:popupTheme="@style/AppTheme.PopupOverlay"-->
+<!--                app:theme="@style/ToolbarTheme"-->
+<!--                />-->
+
+<!--            <View-->
+<!--                android:id="@+id/anchor_dropdown"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="0dp" />-->
+<!--&lt;!&ndash;            <com.google.android.material.appbar.MaterialToolbar&ndash;&gt;-->
+<!--&lt;!&ndash;                android:id="@+id/toolbar"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_height="?attr/actionBarSize"&ndash;&gt;-->
+<!--&lt;!&ndash;                app:popupTheme="@style/Widget.Design.AppBarLayout"&ndash;&gt;-->
+<!--&lt;!&ndash;                app:title="Music"&ndash;&gt;-->
+<!--&lt;!&ndash;                app:navigationIcon="@drawable/ic__music_24"&ndash;&gt;-->
+<!--&lt;!&ndash;                style="@style/Widget.MaterialComponents.Toolbar.Primary"&ndash;&gt;-->
+<!--&lt;!&ndash;                >&ndash;&gt;-->
+
+<!--&lt;!&ndash;            </com.google.android.material.appbar.MaterialToolbar>&ndash;&gt;-->
+<!--        </com.google.android.material.appbar.AppBarLayout>-->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <nl.joery.animatedbottombar.AnimatedBottomBar
+                android:id="@+id/animTab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFF"
+                android:elevation="2dp"
+                app:abb_animationDuration="450"
+                app:abb_animationInterpolator="@android:anim/accelerate_decelerate_interpolator"
+                app:abb_indicatorAnimation="slide"
+                app:abb_indicatorAppearance="round"
+                app:abb_indicatorColor="#B867C8"
+                app:abb_indicatorHeight="4dp"
+                app:abb_indicatorLocation="bottom"
+                app:abb_indicatorMargin="16dp"
+                app:abb_selectedIndex="1"
+                app:abb_selectedTabType="icon"
+                app:abb_tabAnimation="slide"
+                app:abb_tabColorSelected="#B867C8"
+                app:abb_tabs="@menu/nav_menu"
+                app:layout_constraintBottom_toTopOf="@+id/ViewPager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/ViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/animTab" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</layout>

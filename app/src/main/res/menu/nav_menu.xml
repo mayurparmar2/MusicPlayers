@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/item0"
+            android:title="Favorites"
+            android:icon="@drawable/ic_full_favorite_24"/>
+        <item
+            android:id="@+id/item1"
+            android:title="Playlist"
+            android:icon="@drawable/ic_queue_music_24"/>
+        <item
+            android:id="@+id/item2"
+            android:title="Tracks"
+            android:icon="@drawable/ic__music_24"/>
+        <item
+            android:id="@+id/item3"
+            android:title="Albums"
+            android:icon="@drawable/ic_baseline_album_24"/>
+        <item
+            android:id="@+id/item4"
+            android:title="Artists"
+            android:icon="@drawable/music_teacher"/>
+        <item
+            android:id="@+id/item5"
+            android:title="Folders"
+            android:icon="@drawable/music_folder"/>
+    </group>
+</menu>
